@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 import trofeu from '../public/trofeu.png'
-import api from '../services/api'
 import axios from 'axios'
 
 import {
@@ -12,7 +10,6 @@ import {
 } from '../styles/styles'
 export default function Home() {
   const [trofeus, setTrofeus] = useState(0)
-  const [cont, setCont] = useState(0)
 
   useEffect(() => {
     CarregaTrofeus()
@@ -24,8 +21,6 @@ export default function Home() {
   }, [])
 
   async function CarregaTrofeus() {
-
-    console.log(process.env.KEY)
 
     var options = {
       method: 'GET',
@@ -43,7 +38,6 @@ export default function Home() {
       console.error(error);
     });
 
-    setCont(cont + 1)
   }
   return (
     <Container>
