@@ -1,13 +1,20 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import trofeu from '../public/trofeu.png'
+import daniel from '../public/trofeu.png'
+import ggaxie from '../public/ggaxie.png'
 import axios from 'axios'
 
 import {
   Container,
   Text
+} from '../styles/daniel'
 
-} from '../styles/styles'
+import {
+  Containerggaxie,
+  Textggaxie
+} from '../styles/ggaxie'
+
+
 export default function Home() {
   const [trofeus, setTrofeus] = useState(0)
 
@@ -40,9 +47,26 @@ export default function Home() {
 
   }
   return (
-    <Container>
-      <Image src={trofeu} alt="Picture of the author" />
-      <Text>{trofeus}</Text>
-    </Container>
+    <>
+      {process.env.ID == 'daniel' &&
+        <Container>
+          <Image src={daniel} alt="Picture of the author daniel" />
+          <Text>{trofeus}</Text>
+        </Container>
+      }
+
+      {process.env.ID == 'ggaxie' &&
+        <Containerggaxie>
+          <Image
+           
+          src={ggaxie} 
+          alt="Picture of the author ggaxie"                   
+          
+          />
+          <Textggaxie>{trofeus}</Textggaxie>
+        </Containerggaxie>
+      }
+    </>
+
   )
 }

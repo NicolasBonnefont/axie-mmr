@@ -3,7 +3,9 @@ module.exports = {
 
   env: {
     KEY: process.env.KEY,
-    RONIN:process.env.RONIN
+    RONIN: process.env.RONIN,
+    URL: process.env.URL,
+    ID: process.env.ID
   },
 
   async headers() {
