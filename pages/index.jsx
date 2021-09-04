@@ -64,7 +64,7 @@ export default function Home() {
           alt="Picture of the author ggaxie"                   
           
           />
-          <Textggaxie>{2218}</Textggaxie>
+          <Textggaxie>{2253}</Textggaxie>
         </Containerggaxie>
       }
     </>
