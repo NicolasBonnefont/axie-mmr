@@ -39,8 +39,8 @@ export default function Home() {
     };
 
     axios.request(options).then(function (response) {
-      setTrofeus(response.data.mmr)
-      console.log(response.data.mmr)
+      console.log(response.data.walletData.pvpData.elo)
+      setTrofeus(response.data.walletData.pvpData.elo)
     }).catch(function (error) {
       console.error(error);
     });
