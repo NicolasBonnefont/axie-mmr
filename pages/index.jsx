@@ -31,7 +31,7 @@ export default function Home() {
 
     var options = {
       method: 'GET',
-      url: `https://axie-infinity.p.rapidapi.com/get-slp/0x${process.env.RONIN}`,
+      url: `https://axie-infinity.p.rapidapi.com/get-final-data/0x${process.env.RONIN}`,
       headers: {
         'x-rapidapi-host': 'axie-infinity.p.rapidapi.com',
         'x-rapidapi-key': process.env.KEY
