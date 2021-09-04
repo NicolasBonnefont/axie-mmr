@@ -23,7 +23,7 @@ export default function Home() {
 
     setInterval(async () => {
       await CarregaTrofeus()
-    }, 10000);
+    }, 100000);
 
   }, [])
 
@@ -39,7 +39,6 @@ export default function Home() {
     };
 
     axios.request(options).then(function (response) {
-      console.log(response.data)
       setTrofeus(response.data.mmr)
       console.log(response.data.mmr)
     }).catch(function (error) {
@@ -64,7 +63,7 @@ export default function Home() {
           alt="Picture of the author ggaxie"                   
           
           />
-          <Textggaxie>{2253}</Textggaxie>
+          <Textggaxie>{trofeus}</Textggaxie>
         </Containerggaxie>
       }
     </>
